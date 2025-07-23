@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../servicios/auth.service';
 import { MatIconModule } from '@angular/material/icon';
+import { API_BASE_URL } from '../../servicios/api.config';
 
 @Component({
   selector: 'app-login',
@@ -37,7 +38,7 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       const { correo, contrasena } = this.loginForm.value;
-      this.http.post<any>('https://localhost:7183/api/Usuarios/login', { correo, contrasena })
+      this.http.post<any>(`${API_BASE_URL}/Usuarios/login`, { correo, contrasena })
         .subscribe({
           next: (usuario) => {
             this.auth.login(usuario);
