@@ -41,6 +41,6 @@ export class AppComponent {
 
   logout() {
     this.auth.logout();
-    window.location.href = '/login';
+    this.router.navigate(['/login']);
   }
 }
