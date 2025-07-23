@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'https://localhost:7183/api'; 
+export const API_BASE_URL = 'https://sistemaventas-api-render.onrender.com/api'; 
