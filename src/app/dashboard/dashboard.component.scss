@@ -1,0 +1,67 @@
+.dashboard-container {
+  max-width: 900px;
+  margin: 8px auto 0 auto;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  text-align: center;
+}
+.dashboard-img {
+  margin: 1.2rem auto 0 auto;
+  display: block;
+  max-width: 96px;
+  opacity: 0.93;
+}
+.dashboard-desc {
+  margin: 1.2rem 0 2.2rem 0;
+  font-size: 1.1rem;
+  color: #444;
+  text-align: center;
+}
+.dashboard-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 0 1.5rem 0;
+}
+.stat-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(25,118,210,0.07);
+  padding: 1.5rem 2.2rem;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+.stat-card mat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.stat-card:hover {
+  box-shadow: 0 4px 24px rgba(25,118,210,0.13);
+  transform: translateY(-2px) scale(1.03);
+}
+.stat-card.ventas mat-icon { color: #388e3c; background: #e8f5e9; border-radius: 50%; padding: 0.4rem; }
+.stat-card.productos mat-icon { color: #1976d2; background: #e3f2fd; border-radius: 50%; padding: 0.4rem; }
+.stat-card.categorias mat-icon { color: #8e24aa; background: #f3e5f5; border-radius: 50%; padding: 0.4rem; }
+.stat-card.usuarios mat-icon { color: #fbc02d; background: #fffde7; border-radius: 50%; padding: 0.4rem; }
+.stat-value {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.stat-label {
+  font-size: 1.08rem;
+  color: #555;
+  font-weight: 500;
+}
+.dashboard-desc-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 1.5rem 0 2.5rem 0;
+}
+

@@ -1,0 +1,35 @@
+.producto-form-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-width: 320px;
+  max-width: 380px;
+  margin: 0 auto;
+}
+:host ::ng-deep .mat-dialog-container {
+  padding: 24px 24px 16px 24px !important;
+  border-radius: 14px;
+  max-height: 80vh;
+  min-width: 320px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1976d2;
+}
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding-bottom: 8px;
+  z-index: 2;
+} 

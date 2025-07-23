@@ -1,0 +1,26 @@
+<div class="login-container">
+  <div class="login-logo-row">
+    <mat-icon class="login-logo">point_of_sale</mat-icon>
+    <span class="login-app-title">Sistema de Ventas</span>
+  </div>
+  <h2 class="login-title">Bienvenido</h2>
+  <div class="login-subtitle">Inicia sesión para continuar</div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Correo electrónico</mat-label>
+      <input matInput formControlName="correo" type="email" required autocomplete="username">
+      <mat-error *ngIf="loginForm.get('correo')?.hasError('required')">El correo es obligatorio</mat-error>
+      <mat-error *ngIf="loginForm.get('correo')?.hasError('email')">Correo inválido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Contraseña</mat-label>
+      <input matInput formControlName="contrasena" type="password" required autocomplete="current-password">
+      <mat-error *ngIf="loginForm.get('contrasena')?.hasError('required')">La contraseña es obligatoria</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="full-width" type="submit" [disabled]="!loginForm.valid">
+      <mat-icon>login</mat-icon> Iniciar sesión
+    </button>
+  </form>
+</div>

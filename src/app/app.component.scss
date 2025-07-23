@@ -1,0 +1,107 @@
+.main-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+}
+.toolbar-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+.toolbar-title-link:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.toolbar-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.menu-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-right: 1.2rem;
+}
+.user-menu-btn {
+  margin-left: 0.2rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-transform: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #fff;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0 12px;
+  height: 36px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.user-menu-btn:hover, .user-menu-btn:focus {
+  background: rgba(255,255,255,0.13);
+}
+.user-menu-btn mat-icon {
+  font-size: 1.15rem;
+  margin-right: 0.2rem;
+  vertical-align: middle;
+}
+.mat-menu-item[disabled] {
+  opacity: 0.7;
+  pointer-events: none;
+}
+.active-link {
+  background: rgba(255,255,255,0.13) !important;
+  color: #fff !important;
+  border-radius: 6px;
+}
+.main-footer {
+  width: 100%;
+  background: #f5f5f5;
+  color: #444;
+  font-size: 0.97rem;
+  text-align: center;
+  padding: 0.5rem 0 0.6rem 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+.team-names {
+  font-size: 0.93rem;
+  color: #1976d2;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.main-content {
+  margin-top: 72px;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 72px);
+  background: #f7f7f7;
+  margin-bottom: 48px;
+}
+.main-logo {
+  font-size: 2.1rem;
+  margin-right: 0.5rem;
+  color: #fffde7;
+  vertical-align: middle;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.10));
+}

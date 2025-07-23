@@ -1,0 +1,33 @@
+<mat-toolbar *ngIf="showToolbar()" color="primary" class="main-toolbar">
+  <a class="toolbar-title-link" routerLink="/dashboard">
+    <mat-icon class="main-logo">point_of_sale</mat-icon>
+    <span class="toolbar-title">Sistema de Ventas</span>
+  </a>
+  <span class="spacer"></span>
+  <nav class="menu-nav">
+    <button mat-button routerLink="/dashboard" routerLinkActive="active-link"><mat-icon>dashboard</mat-icon> Dashboard</button>
+    <button mat-button routerLink="/productos" routerLinkActive="active-link"><mat-icon>shopping_bag</mat-icon> Productos</button>
+    <button mat-button routerLink="/categorias" routerLinkActive="active-link"><mat-icon>category</mat-icon> Categorías</button>
+    <button *ngIf="auth.hasRole('Admin')" mat-button routerLink="/usuarios" routerLinkActive="active-link"><mat-icon>group</mat-icon> Usuarios</button>
+    <button *ngIf="auth.hasAnyRole('Admin','Vendedor')" mat-button routerLink="/ventas" routerLinkActive="active-link"><mat-icon>point_of_sale</mat-icon> Ventas</button>
+  </nav>
+  <ng-container *ngIf="usuario">
+    <button mat-button [matMenuTriggerFor]="userMenu" class="user-menu-btn">
+      <mat-icon>account_circle</mat-icon>
+      {{ usuario.nombre }}
+    </button>
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item disabled><mat-icon>badge</mat-icon> Rol: {{ usuario.rol }}</button>
+      <button mat-menu-item (click)="logout()"><mat-icon>logout</mat-icon> Cerrar sesión</button>
+    </mat-menu>
+  </ng-container>
+</mat-toolbar>
+<div class="main-content">
+  <router-outlet />
+</div>
+<footer *ngIf="showToolbar()" class="main-footer">
+  <span>Sistema desarrollado por:</span>
+  <span class="team-names">
+    Luis Gorpa &middot; Deiby Tolentino &middot; Leonardo Lopez &middot; Kevin Sánchez
+  </span>
+</footer>
